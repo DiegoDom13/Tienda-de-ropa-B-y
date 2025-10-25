@@ -1,0 +1,41 @@
+.cliente_slider_item {
+	display          : -webkit-box;
+	display          : -ms-flexbox;
+	display          : flex;
+	height           : fit-content;
+	-webkit-box-align: center;
+	-ms-flex-align   : center;
+	align-items      : center;
+}
+
+.owl-carousel .owl-item {
+	height  : 550px !important;
+	position: relative !important;
+
+}
+
+.owl-carousel .owl-item img {
+	object-fit: cover;
+}
+
+.text-carousel {
+	opacity        : 0;
+	display        : flex;
+	justify-content: center;
+	align-items    : center;
+	position       : absolute;
+	width          : 100%;
+	height         : 300px;
+	top            : 100%;
+	left           : 0%;
+	text-decoration: none !important;
+	color          : rgb(255, 238, 208);
+	font-size      : 2.1rem;
+	background     : radial-gradient(ellipse farthest-side at top left, rgb(92 114 111), rgb(11 20 19 / 61%), rgb(55 84 90 / 73%));
+	transition     : opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item:hover .text-carousel {
+	top    : 50%;
+	opacity: 1;
+}

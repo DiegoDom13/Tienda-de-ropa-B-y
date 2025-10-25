@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/*Regular*/
+@font-face {
+  font-family: 'BWModelica--regular';
+  src        : url(./assets/fonts/BwModelica-Regular.otf) format('opentype');
+  font-weight: 400;
+  font-style : normal;
+}
+
+@font-face {
+  font-family: 'BWModelica--Bold';
+  src        : url(./assets/fonts/BwModelicaSS01-Bold.otf) format('opentype');
+  font-weight: 900;
+  font-style : normal;
+  font-size  : 36;
+}
+
+@font-face {
+  font-family: 'Kurale';
+  src        : url(./assets/fonts/Kurale-Regular.ttf) format('truetype');
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+* {
+  margin : 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: 'BWModelica--Bold';
+  font-size  : 4rem !important;
+}
+
+p {
+  font-family: 'Kurale';
+}
+
+body {
+  background-color: #053a33 !important;
+}
+
+
+:root {
+  --bs-breakpoint-xs : 0;
+  --bs-breakpoint-sm : 576px;
+  --bs-breakpoint-md : 768px;
+  --bs-breakpoint-lg : 992px;
+  --bs-breakpoint-xl : 1200px;
+  --bs-breakpoint-xxl: 1400px;
+  /*color de fuente*/
+  --ul-text          : rgb(255, 255, 255);
+}
+
+:root {
+  --bs-body-bg       : #f5f5f5 !important;
+  --bs-body-font-size: 1.0rem !important;
+}
+
+.row {
+  margin-right: calc(0.5 * var(--bs-gutter-x) / 2) !important;
+  margin-left : calc(-1 * var(--bs-gutter-x) / 2);
+}
+
+body {
+  margin                     : 0;
+  width                      : 100%;
+  height                     : auto;
+  background-color           : var(--bs-body-bg);
+  -webkit-text-size-adjust   : 100%;
+  -webkit-tap-highlight-color: transparent;
+}
