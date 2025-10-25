@@ -1,59 +1,62 @@
-import React from 'react';
-import OwlCarousel from 'react-owl-carousel';
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 export default function Carrusel() {
-    const options = {
-        items: 1,
-        loop: true,
-        margin: 10,
-        lazyLoad: true,
-        nav: false,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: true,
-        smartSpeed: 800,
+    const settings = {
+        slidesToShow: 1,
+        infinite: true,
+        lazyLoad: "ondemand",
+        arrows: false,
+        autoplay: false,
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
+        speed: 800,
         dots: true,
-        responsive: {
-            0: {
-                items: 1,
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: { slidesToShow: 1 },
             },
-            700: {
-                items: 1,
+            {
+                breakpoint: 700,
+                settings: { slidesToShow: 1 },
             },
-            1000: {
-                items: 1,
+            {
+                breakpoint: 0,
+                settings: { slidesToShow: 1 },
             },
-        },
+        ],
     };
+
 
     return (
         <>
-            <OwlCarousel className="owl-carousel owl-theme" {...options}>
+            <Slider {...settings} className="slick-carousel">
                 {/* Cada imagen debe estar dentro de un elemento individual */}
-                <a href="#">
+                <a className="item-slide" href="#">
                     <img src="./img-carousel/calzado.webp" alt="Imagen 1 del carrusel"
-                        style={{ marginTop: "-250px" }}
+                        style={{ marginTop: "-50px" }}
                     />
                     <p className='text-carousel'>
                         La  mejor ropa de verano 2025 esta en liquidación, aprovecha ahora!
                     </p>
                 </a>
-                <a href="#">
+                <a className="item-slide" href="#">
                     <img src="./img-carousel/modeloOtoño1.webp" alt="Imagen 2 del carrusel" />
                     <p className='text-carousel'>
                         ¡¿Listos para el otoño?!
                     </p>
                 </a>
-                <a href="#">
+                <a className="item-slide" href="#">
                     <img src="./img-carousel/smartphones.jpg" alt="Imagen 3 del carrusel" />
                     <p className='text-carousel'>
                         La elegancia no es un lujo, es un estilo de vida...
                     </p>
                 </a>
-                <a href="#">
+                <a className="item-slide" href="#">
                     <img src="./img-carousel/laptops.jpg" alt="Imagen 4 del carrusel"
                         style={{ marginTop: "-450px" }}
                     />
@@ -61,7 +64,7 @@ export default function Carrusel() {
                         Todo en un mismo lugar!
                     </p>
                 </a>
-            </OwlCarousel>
+            </Slider>
         </>
     );
 }
